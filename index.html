@@ -10,10 +10,16 @@
 
 
   <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/foundation.datepicker.css">
 
 
   <script src="javascripts/vendor/custom.modernizr.js"></script>
 
+  <script>
+
+
+
+    </script>
 </head>
 <body>
 
@@ -81,6 +87,10 @@
           <p><a href="#" class="large secondary button">Large Secondary Button</a></p>
         </div>
       </div>
+
+      <input class="datepicker" type="text" value="02-16-2012" id="dp1">
+
+
 		</div>
 
 		<div class="large-4 columns">
@@ -97,13 +107,10 @@
 		</div>
 	</div>
 
-  <script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
-  '.js><\/script>')
-  </script>
 
-  <script src="javascripts/foundation/foundation.js"></script>
+    <script src="javascripts/vendor/jquery.js"></script>
+
+    <script src="javascripts/foundation/foundation.js"></script>
 
 	<script src="javascripts/foundation/foundation.abide.js"></script>
 
@@ -135,8 +142,10 @@
 
 	<script src="javascripts/foundation/foundation.topbar.js"></script>
 
+	<script src="javascripts/foundation/foundation.datepicker.js"></script>
 
   <script>
+  $('.datepicker').fdatepicker();
     $(document).foundation();
   </script>
 </body>
