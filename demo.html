@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Foundation 4</title>
+
+
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/foundation.datepicker.css">
+
+  <style type="text/css">
+.custom.checkbox
+{
+    vertical-align: middle;
+float: left
+}
+
+label
+{
+vertical-align: middle;
+float: left
+}
+.last { margin-bottom:40px}
+
+li { list-style-type:none }
+
+</style>
+
+  <script src="javascripts/vendor/custom.modernizr.js"></script>
+
+
+</head>
+<body>
+
+	<div class="row">
+		<div class="large-12 columns">
+			<h2>Welcome to Foundation</h2>
+			<p>This is version 4.3.1.</p>
+			<hr />
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-8 columns">
+			<h3>The Grid</h3>
+
+			<!-- Grid Example -->
+			<div class="row">
+				<div class="large-12 columns">
+					<div class="panel">
+						<p>This is a twelve column section in a row. Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-6 columns">
+					<div class="panel">
+						<p>Six columns</p>
+					</div>
+				</div>
+				<div class="large-6 columns">
+					<div class="panel">
+						<p>Six columns</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-4 columns">
+					<div class="panel">
+						<p>Four columns</p>
+					</div>
+				</div>
+				<div class="large-4 columns">
+					<div class="panel">
+						<p>Four columns</p>
+					</div>
+				</div>
+				<div class="large-4 columns">
+					<div class="panel">
+						<p>Four columns</p>
+					</div>
+				</div>
+			</div>
+
+			<h3>Forms</h3>
+
+			<form class="custom">
+    			<div class="row">
+        			<div class="large-6 columns">
+            			<h6>Typeahead</h6>
+                			<div id="typeahead">
+                    			<input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]">
+                			</div>
+        			</div>
+        			<div class="large-6 columns">
+            			<h6>Datepicker</h6>
+            			<input class="datepicker" type="text" value="02-16-2012" id="dp1">
+        			</div>
+    			</div>
+    			<div class="row">
+        			<div class="large-6 columns">
+                        <!--
+                        <label for="1">Label for Checkbox</label>
+                                                <input id="1" type="checkbox">
+                                                -->
+                        <input class="chk" id="1" type="checkbox">
+                        <label for="1">Label for Checkbox</label>
+                                                <!--
+                        <input class="chk" id="1" type="checkbox">
+                                                <span>Label for Checkbox</span>
+                                                </label>
+                        -->
+        			</div>
+    			</div>
+			</form>
+
+			<h3>Buttons</h3>
+
+            <div class="row">
+                <div class="large-6 columns">
+                  <p><a href="#" class="small button">Small Button</a></p>
+                  <p><a href="#" class="button">Medium Button</a></p>
+                  <p><a href="#" class="large button">Large Button</a></p>
+                </div>
+                <div class="large-6 columns">
+                  <p><a href="#" class="small alert button">Small Alert Button</a></p>
+                  <p><a href="#" class="success button">Medium Success Button</a></p>
+                  <p><a href="#" class="large secondary button">Large Secondary Button</a></p>
+                </div>
+              </div>
+		</div>
+
+		<div class="large-4 columns">
+			<h4>Getting Started</h4>
+			<p>We're stoked you want to try Foundation! To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+
+			<h4>Other Resources</h4>
+			<p>Once you've exhausted the fun in this document, you should check out:</p>
+			<ul class="disc">
+				<li><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</li>
+				<li><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</li>
+				<li><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</li>
+			</ul>
+		</div>
+	</div>
+
+    <div class="row">
+    <!--    document.write("<a href='" " + link + " "'>" + text + "</a>"); -->
+    </div>
+
+    <div class="row last">
+        <form class="">
+        Available
+        <ul data-bind="foreach: AllUsers, visible: AllUsers().length > 0">
+            <li>
+                <!--<div data-bind="click: $parent.SelectedUser">-->
+                <label class="target">
+                <input type="checkbox" data-bind="checked:$root.selectedUserNames, value: userName" />
+                <span class="" data-bind="text: userName" ></span>
+                </label>
+                <!--</div>-->
+            </li>
+        </ul><br/>
+        Selected
+        <ul data-bind="foreach: SelectedUsers, visible: SelectedUsers().length > 0">
+            <li>
+                <span data-bind="text: userName" ></span></div>
+            </li>
+        </ul>
+
+
+<div class="test button">click</div>
+
+
+
+
+
+        </form>
+    </div>
+
+
+
+
+    <script src="javascripts/vendor/jquery.js"></script>
+
+    <script src="javascripts/vendor/knockout-2.3.0.js"></script>
+
+    <script src="javascripts/foundation/foundation.js"></script>
+
+	<script src="javascripts/foundation/foundation.abide.js"></script>
+
+	<script src="javascripts/foundation/foundation.alerts.js"></script>
+
+	<script src="javascripts/foundation/foundation.clearing.js"></script>
+
+	<script src="javascripts/foundation/foundation.cookie.js"></script>
+
+	<script src="javascripts/foundation/foundation.dropdown.js"></script>
+
+	<script src="javascripts/foundation/foundation.forms.js"></script>
+
+	<script src="javascripts/foundation/foundation.interchange.js"></script>
+
+	<script src="javascripts/foundation/foundation.joyride.js"></script>
+
+	<script src="javascripts/foundation/foundation.magellan.js"></script>
+
+	<script src="javascripts/foundation/foundation.orbit.js"></script>
+
+	<script src="javascripts/foundation/foundation.placeholder.js"></script>
+
+	<script src="javascripts/foundation/foundation.reveal.js"></script>
+
+	<script src="javascripts/foundation/foundation.section.js"></script>
+
+	<script src="javascripts/foundation/foundation.tooltips.js"></script>
+
+	<script src="javascripts/foundation/foundation.topbar.js"></script>
+
+	<script src="javascripts/foundation/foundation.datepicker.js"></script>
+
+	<script src="javascripts/foundation/typeahead.js"></script>
+
+  <script>
+  $('.typeahead').typeahead();
+  $('.datepicker').fdatepicker();
+    $(document).foundation();
+  </script>
+
+<script>
+var $button = $('div.test');
+var $checkbox = $('input:checkbox');
+$button.click(function() {
+    //console.log('clicked');
+    if($checkbox.prop('checked, checked')) {
+        console.log('PEW');
+} else {
+    console.log('awww');
+}
+});
+</script>
+
+    <script>
+        function User(data) {
+        this.userName = ko.observable(data.userName);
+        this.selected = ko.observable(data.selected);
+    }
+
+
+    var dataSource = [
+        new User({
+        userName: "test1",
+        selected: false
+    }),
+        new User({
+        userName: "test2",
+        selected: false
+    })
+        ];
+
+
+    function UsersViewModel() {
+        var self = this;
+        //initial data may have two IEnumerables
+        self.AllUsers = ko.observableArray(dataSource);
+        self.SelectedUsers = ko.observableArray([]);
+
+        self.selectedUserNames = ko.observableArray([]);
+
+        self.selectedUserNames.subscribe(function(newValue) {
+            var newSelectedUserNames = newValue;
+            var newSelectedUsers = [];
+            ko.utils.arrayForEach(newSelectedUserNames, function(userName) {
+                var selectedUser = ko.utils.arrayFirst(self.AllUsers(), function(user) {
+                    return (user.userName() === userName);
+                });
+                newSelectedUsers.push(selectedUser);
+console.log(userName);
+            });
+            self.SelectedUsers(newSelectedUsers);
+        });
+    }
+    ko.applyBindings(new UsersViewModel());
+    </script>
+
+
+
+</body>
+</html>

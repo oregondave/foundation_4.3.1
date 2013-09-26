@@ -4,130 +4,100 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Foundation 4</title>
-
-
-  <link rel="stylesheet" href="stylesheets/app.css">
-  <link rel="stylesheet" href="stylesheets/foundation.datepicker.css">
-
-
-  <script src="javascripts/vendor/custom.modernizr.js"></script>
-
-  <script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Foundation 4</title>
 
 
 
-    </script>
+
+<link rel="stylesheet" href="stylesheets/app.css">
+<link rel="stylesheet" href="stylesheets/foundation.datepicker.css">
+<link rel="stylesheet" href="select2/select2.css">
+
+<style type="text/css">
+
+    .custom.checkbox
+    {
+    vertical-align: middle;
+    float: left
+    }
+
+    label
+    {
+    vertical-align: middle;
+    float: left
+    }
+
+    .last {
+    margin-bottom:40px
+    }
+
+    li {
+    list-style-type:none
+    }
+
+    .text {
+    font-size:.8em
+    }
+
+</style>
+
+<script src="javascripts/vendor/custom.modernizr.js"></script>
+
 </head>
+
 <body>
-
-	<div class="row">
-		<div class="large-12 columns">
-			<h2>Welcome to Foundation</h2>
-			<p>This is version 4.3.1.</p>
-			<hr />
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-8 columns">
-			<h3>The Grid</h3>
-
-			<!-- Grid Example -->
-			<div class="row">
-				<div class="large-12 columns">
-					<div class="panel">
-						<p>This is a twelve column section in a row. Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="large-6 columns">
-					<div class="panel">
-						<p>Six columns</p>
-					</div>
-				</div>
-				<div class="large-6 columns">
-					<div class="panel">
-						<p>Six columns</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-    			<section id="typeahead">
-
-
-
-
-              <input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]">
-
-
-
-
-          </section>
+    <div class="row">
+        <form class="">
+            <div class="row">
+            <h6>Available</h6>
+                <ul data-bind="foreach: AllUsers, visible: AllUsers().length > 0">
+                    <div class="row">
+                    <li>
+                        <label class="target text">
+                        <input type="checkbox" data-bind="checked:$root.selectedUserNames, value: userName" />
+                        <span data-bind="text: userName" ></span>
+                        </label>
+                    </li>
+                    </div>
+                </ul>
             </div>
-			<div class="row">
-				<div class="large-4 columns">
-					<div class="panel">
-						<p>Four columns</p>
-					</div>
-				</div>
-				<div class="large-4 columns">
-					<div class="panel">
-						<p>Four columns</p>
-					</div>
-				</div>
-				<div class="large-4 columns">
-					<div class="panel">
-						<p>Four columns</p>
-					</div>
-				</div>
-			</div>
+            <div class="row">
+            <h6>Selected</h6>
+                <ul data-bind="foreach: SelectedUsers, visible: SelectedUsers().length > 0">
+                    <li>
+                        <span class="text" data-bind="text: userName" ></span>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
 
-			<div class="row">
-			<input class="datepicker" type="text" value="02-16-2012" id="dp1">
-			</div>
+    <div class="row">-------------------------------------------------</div>
 
+    <div class="row">
+        <h6>Select2</h6>
+        <select id="e2" style="width:200px;">
+        <option value=""><option>
+        <option value="1">Mustard</option>
+        <option value="2">Ketchup</option>
+        <option value="3">Relish</option>
+    </select>
+    </div>
 
-
-			<h3>Buttons</h3>
-
-      <div class="row">
-        <div class="large-6 columns">
-          <p><a href="#" class="small button">Small Button</a></p>
-          <p><a href="#" class="button">Medium Button</a></p>
-          <p><a href="#" class="large button">Large Button</a></p>
-        </div>
-        <div class="large-6 columns">
-          <p><a href="#" class="small alert button">Small Alert Button</a></p>
-          <p><a href="#" class="success button">Medium Success Button</a></p>
-          <p><a href="#" class="large secondary button">Large Secondary Button</a></p>
-        </div>
-      </div>
+    <div class="row degrees">
+        <h6>typeahead.js</h6>
+        <input class="typeahead" type="text" placeholder="degrees">
+    </div>
 
 
 
-
-		</div>
-
-		<div class="large-4 columns">
-			<h4>Getting Started</h4>
-			<p>We're stoked you want to try Foundation! To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-
-			<h4>Other Resources</h4>
-			<p>Once you've exhausted the fun in this document, you should check out:</p>
-			<ul class="disc">
-				<li><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</li>
-				<li><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</li>
-				<li><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</li>
-			</ul>
-		</div>
-	</div>
-
+<!-- Foundation .js files + libs (knockout.js / jquery / select2) -->
 
     <script src="javascripts/vendor/jquery.js"></script>
+
+    <script src="javascripts/vendor/knockout-2.3.0.js"></script>
 
     <script src="javascripts/foundation/foundation.js"></script>
 
@@ -165,10 +135,86 @@
 
 	<script src="javascripts/foundation/typeahead.js"></script>
 
-  <script>
-  $('.typeahead').typeahead();
-  $('.datepicker').fdatepicker();
+    <script src="select2/select2.js"></script>
+
+    <script src="javascripts/vendor/typeahead.js"></script>
+
+<!-- END Foundation .js files -->
+
+
+<!-- Secondary components and document.ready -->
+<!-- NOTE THAT CUSTOM FORMS IS DISABLED HERE -->
+
+    <script>
+    $(document).ready(function() { $("#e2").select2({
+                placeholder: "Select a State",
+                allowClear: true
+            }); });
+
+    $(document).ready(function() {
+      $('.degrees .typeahead').typeahead({
+        name: 'countries',
+        local: ["Bachelor of Science","Bachelor of Science in Accounting","Bachelor of Science in Business","Bachelor of Science in Business\/Accounting","Bachelor of Science in Business\/Administration","Bachelor of Science in Business\/Communications","Bachelor of Science in Business\/e-Business","Bachelor of Science in Business\/Finance","Bachelor of Science in Business\/Global Business Management","Bachelor of Science in Business\/Green and Sustainable","Bachelor of Science in Business\/Green and Sustainable Enterprise Management","Bachelor of Science in Business\/Hospitality Management","Bachelor of Science in Business\/Human Resource Management"]
+      });
+
+    });
+
+    $('.typeahead').typeahead();
+    $('.datepicker').fdatepicker();
+    //$('form').addClass('custom');
     $(document).foundation();
-  </script>
+    </script>
+
+
+<!-- END Secondary components -->
+
+
+<!-- knockout script for checkbox behavior -->
+    <script>
+        function User(data) {
+        this.userName = ko.observable(data.userName);
+        this.selected = ko.observable(data.selected);
+    }
+
+
+    var dataSource = [
+        new User({
+        userName: "test1",
+        selected: false
+    }),
+        new User({
+        userName: "test2",
+        selected: false
+    })
+        ];
+
+
+    function UsersViewModel() {
+        var self = this;
+        //initial data may have two IEnumerables
+        self.AllUsers = ko.observableArray(dataSource);
+        self.SelectedUsers = ko.observableArray([]);
+
+        self.selectedUserNames = ko.observableArray([]);
+
+        self.selectedUserNames.subscribe(function(newValue) {
+            var newSelectedUserNames = newValue;
+            var newSelectedUsers = [];
+            ko.utils.arrayForEach(newSelectedUserNames, function(userName) {
+                var selectedUser = ko.utils.arrayFirst(self.AllUsers(), function(user) {
+                    return (user.userName() === userName);
+                });
+                newSelectedUsers.push(selectedUser);
+console.log(userName);
+            });
+            self.SelectedUsers(newSelectedUsers);
+        });
+    }
+    ko.applyBindings(new UsersViewModel());
+    </script>
+
+<!-- END KNOCKOUT CHECKBOX SCRIPT -->
+
+
 </body>
 </html>
